@@ -1,17 +1,5 @@
 import random
 from array import *
-N = 10
-a = []
-for i in range(N):
-    a.append(random.randint(1, 99))
-print(a)
-
-for i in range(N - 1):
-    for j in range(N - i - 1):
-        if a[j] > a[j + 1]:
-            a[j], a[j + 1] = a[j + 1], a[j]
-
-print(a)
 
 n = 25
 arr = array("i", [])
@@ -20,4 +8,8 @@ for i in range(n):
     arr.insert(i, random.randint(1, 99))
 print(arr)
 
-for
+for i in range(n - 1):
+    for j in range(n - i - 1):
+        if(arr[j] > arr[j + 1]):
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+print(arr)
